@@ -18,4 +18,5 @@ https://github.com/amiedawn/scheduler
 ![Screenshot](/assets/images/startscreen.png)
 
 ## Contribution
-Made by Amie Carroll
+* Made by Amie Carroll
+* www.fontawesome.com/icons/save for Save icon
