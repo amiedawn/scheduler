@@ -35,34 +35,44 @@ function compareTime() {
   }  
 };
 
-
+var storedAppt;
+var apptObj = {};
+var apptArr = [];
 
 // save buttons and save to local storage
-$(".saveBtn").on("click", function() {
-  
-  var currentTime = $(this).parent().attr("id");
-  var apptDescription = $(this).val().trim("id");
+function saveAppt() {
+  $(".saveBtn").on("click", function () {
+    var currentTime = $(this)
+      .parent()
+      .attr("id");
+    var apptDescription = $(this)
+      .find("textarea")
+      .val()
+      .trim();
 
-  // save and set appt time
-  localStorage.setItem("currentTime",$("#apptDescription").text());
-  console.log("currentTime", currentTime);
-  console.log("apptDescription", apptDescription);
+
+  storedAppt = JSON.parse(localStorage.getItem(now));
+  apptObj = {}; //already did this when declared, may delete?
+
+  apptObj[id] = apptDescription;
+  apptArr.push(apptObj);
+  localStorage.setItem(now, JSON.stringify(apptArr));
+
+  for (var i=0; i < storedAppt.length; i++) {
+    if (storedAppt[i].hasOwnProperty(id)) {
+      storedAppt[i][id] = apptDescription;
+      apptArr = storedAppt;
+      localStorage.setItem(now, JSON.stringify(apptArr));
+      return;
+    }
+  }
 });
 
-// store apppointment information
-$("#9am").children("input").val(localStorage.getItem("9am"));
-$("#10am").children("input").val(localStorage.getItem("10am"));
-$("#11am").children("input").val(localStorage.getItem("11am"));
-$("#12pm").children("input").val(localStorage.getItem("12pm"));
-$("#1pm").children("input").val(localStorage.getItem("1pm"));
-$("#2pm").children("input").val(localStorage.getItem("2pm"));
-$("#3pm").children("input").val(localStorage.getItem("3pm"));
-$("#4pm").children("input").val(localStorage.getItem("4pm"));
-$("#5pm").children("input").val(localStorage.getItem("5pm"));
+}
 
 
 compareTime();
-
+saveAppt();
 
 
 
