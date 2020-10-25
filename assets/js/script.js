@@ -39,6 +39,7 @@ $(document).ready(function () {
 
   var appts = [];
 
+  // create variables for input type in each time block
   var $9 = $("#9");
   var $10 = $("#10");
   var $11 = $("#11");
@@ -48,6 +49,7 @@ $(document).ready(function () {
   var $15 = $("#15");
   var $16 = $("#16");
 
+  // convert appt info to stringify for localStorage
   $("button").on("click", function () {
     localStorage.setItem("9AM", JSON.stringify($9.val()));
     localStorage.setItem("10AM", JSON.stringify($10.val()));
