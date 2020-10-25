@@ -50,76 +50,38 @@ $(document).ready(function () {
   var $16 = $("#16");
 
   appts.push($9);
+  appts.push($10);
+  appts.push($11);
+  appts.push($12);
 
   $("button").on("click", function () {
-    localStorage.setItem("9AM", JSON.stringify($9.val()))
-    localStorage.setItem("10AM", JSON.stringify($10.val()))
-    localStorage.setItem("11AM", JSON.stringify($11.val()))
-    localStorage.setItem("12PM", JSON.stringify($12.val()))
-    localStorage.setItem("1PM", JSON.stringify($13.val()))
-    localStorage.setItem("2PM", JSON.stringify($14.val()))
-    localStorage.setItem("3PM", JSON.stringify($15.val()))
-    localStorage.setItem("4PM", JSON.stringify($16.val()))
-  })
+    localStorage.setItem("9AM", JSON.stringify($9.val()));
+    localStorage.setItem("10AM", JSON.stringify($10.val()));
+    localStorage.setItem("11AM", JSON.stringify($11.val()));
+    localStorage.setItem("12PM", JSON.stringify($12.val()));
+    localStorage.setItem("1PM", JSON.stringify($13.val()));
+    localStorage.setItem("2PM", JSON.stringify($14.val()));
+    localStorage.setItem("3PM", JSON.stringify($15.val()));
+    localStorage.setItem("4PM", JSON.stringify($16.val()));
+  });
 
-  // create var to store 
-
+  // create var to store each appt and 
   var persist9 = JSON.parse(localStorage.getItem("9AM"));
-  console.log(typeof "persist9")
-  $("#9").val(persist9) = persist9;
+    $("#9").val(persist9) = persist9;
   var persist10 = JSON.parse(localStorage.getItem("10AM"));
-  $("#10").val(persist10) = persist10;
+    $("#10").val(persist10) = persist10;
   var persist11 = JSON.parse(localStorage.getItem("11AM"));
-  $("#11").val(persist11) = persist11;
+    $("#11").val(persist11) = persist11;
   var persist12 = JSON.parse(localStorage.getItem("12PM"));
-  $("#12").val(persist12) = persist12;
+    $("#12").val(persist12) = persist12;
   var persist13 = JSON.parse(localStorage.getItem("1PM"));
-  $("#13").val(persist9) = persist13;
+    $("#13").val(persist13) = persist13;
   var persist14 = JSON.parse(localStorage.getItem("2PM"));
-  $("#14").val(persist14) = persist14;
+    $("#14").val(persist14) = persist14;
   var persist15 = JSON.parse(localStorage.getItem("3PM"));
-  $("#15").val(persist15) = persist15;
+    $("#15").val(persist15) = persist15;
   var persist16 = JSON.parse(localStorage.getItem("4PM"));
-  $("#16").val(persist16) = persist16;
+    $("#16").val(persist16) = persist16;
 
-
-  // var persist10 = JSON.parse(localStorage.getItem($10.val()));
-  // $("persist10").text();
-  // var persist11 = JSON.parse(localStorage.getItem($11.val()));
-  // $("persist11").text();
-  // var persist12 = JSON.parse(localStorage.getItem($12.val()));
-  // $("persist12").text();
-  // var persist13 = JSON.parse(localStorage.getItem($13.val()));
-  // $("persist13").text();
-  // var persist14 = JSON.parse(localStorage.getItem($14.val()));
-  // $("persist14").text();
-  // var persist15 = JSON.parse(localStorage.getItem($15.val()));
-  // $("persist15").text();
-  // var persist16 = JSON.parse(localStorage.getItem($16.val()));
-  // $("persist16").text();
-
-  // $("9").append(localStorage.getItem("9AM"));
-  // $("10").append(localStorage.getItem("10AM"));
-  // $("11").append(localStorage.getItem("11AM"));
-  // $("12").append(localStorage.getItem("12PM"));
-  // $("13").append(localStorage.getItem("1PM"));
-  // $("14").append(localStorage.getItem("2PM"));
-  // $("15").append(localStorage.getItem("3PM"));
-  // $("16").append(localStorage.getItem("4PM"));
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
