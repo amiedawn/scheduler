@@ -21,7 +21,6 @@ $(document).ready(function () {
 
       // past appts are gray
       if (apptTimeInt < nowInt) {
-        //  $("#" + apptTimeInt).attr("style", "background-color: #b5b2b2");
         $("#" + apptTimeInt).attr("style", "background-color: #b5b2b2");
 
       } else if
@@ -49,11 +48,6 @@ $(document).ready(function () {
   var $15 = $("#15");
   var $16 = $("#16");
 
-  appts.push($9);
-  appts.push($10);
-  appts.push($11);
-  appts.push($12);
-
   $("button").on("click", function () {
     localStorage.setItem("9AM", JSON.stringify($9.val()));
     localStorage.setItem("10AM", JSON.stringify($10.val()));
@@ -65,7 +59,7 @@ $(document).ready(function () {
     localStorage.setItem("4PM", JSON.stringify($16.val()));
   });
 
-  // create var to store each appt and 
+  // create var to store each appt; read appts from localStorage and have data persist upon reload
   var persist9 = JSON.parse(localStorage.getItem("9AM"));
     $("#9").val(persist9);
   var persist10 = JSON.parse(localStorage.getItem("10AM"));
@@ -82,6 +76,5 @@ $(document).ready(function () {
     $("#15").val(persist15);
   var persist16 = JSON.parse(localStorage.getItem("4PM"));
     $("#16").val(persist16);
-
 });
   
