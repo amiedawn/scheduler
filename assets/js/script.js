@@ -67,21 +67,21 @@ $(document).ready(function () {
 
   // create var to store each appt and 
   var persist9 = JSON.parse(localStorage.getItem("9AM"));
-    $("#9").val(persist9) = persist9;
+    $("#9").val(persist9);
   var persist10 = JSON.parse(localStorage.getItem("10AM"));
-    $("#10").val(persist10) = persist10;
+    $("#10").val(persist10);
   var persist11 = JSON.parse(localStorage.getItem("11AM"));
-    $("#11").val(persist11) = persist11;
+    $("#11").val(persist11);
   var persist12 = JSON.parse(localStorage.getItem("12PM"));
-    $("#12").val(persist12) = persist12;
+    $("#12").val(persist12);
   var persist13 = JSON.parse(localStorage.getItem("1PM"));
-    $("#13").val(persist13) = persist13;
+    $("#13").val(persist13);
   var persist14 = JSON.parse(localStorage.getItem("2PM"));
-    $("#14").val(persist14) = persist14;
+    $("#14").val(persist14);
   var persist15 = JSON.parse(localStorage.getItem("3PM"));
-    $("#15").val(persist15) = persist15;
+    $("#15").val(persist15);
   var persist16 = JSON.parse(localStorage.getItem("4PM"));
-    $("#16").val(persist16) = persist16;
+    $("#16").val(persist16);
 
 });
   
