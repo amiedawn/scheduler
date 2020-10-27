@@ -20,3 +20,6 @@ https://github.com/amiedawn/scheduler
 ## Contribution
 * Made by Amie Carroll
 * www.fontawesome.com/icons/save for Save icon
+* https://github.com/twopcz/Work-Day-Planner
+* https://github.com/cibellem/dayplanner
+* https://github.com/cmelby/DayPlanner
